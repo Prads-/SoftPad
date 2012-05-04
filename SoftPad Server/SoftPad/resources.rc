@@ -1,0 +1,13 @@
+/*
+	Written By Pradipna Nepal
+	www.pradsprojects.com
+
+	Copyright (C) 2012 Pradipna Nepal
+	Please read COPYING.txt included along with this source code for more detail.
+	If not included, see http://www.gnu.org/licenses/
+*/
+
+#include "resources.h"
+
+BITMAP_ST_APPBANNER			BITMAP		"appBanner.bmp"
+IDI_MAIN_ICON				ICON		"appicon.ico"
