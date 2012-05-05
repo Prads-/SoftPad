@@ -11,10 +11,8 @@
 #include <Windows.h>
 #include <process.h>
 #include <sstream>
-#include "libSoftTouch.h"
 #include "resources.h"
 using namespace std;
-using namespace SoftTouch;
 
 //GUI Theme
 #pragma comment(linker, "/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' \"\"version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
@@ -105,7 +103,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	DeleteObject(headerFont);
 	DeleteObject(controlsFont);
-	freeMemSoftTouch();
 	cleanUpSockets();
 	return 0;
 }

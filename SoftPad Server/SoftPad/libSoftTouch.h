@@ -18,6 +18,11 @@
 #pragma comment (lib, "Ws2_32.lib")
 #pragma comment (lib, "Winmm.lib")
 
+#define VIEW_WIDTH						273
+#define VIEW_HEIGHT						410
+#define SCREEN_PACKET_SIZE				(VIEW_WIDTH * VIEW_HEIGHT * 2)		//In bytes
+#define SCREEN_CAPTURE_SIZE				(VIEW_WIDTH * VIEW_HEIGHT)			//In DWORD
+
 //From libManageConnections.cpp
 extern SOCKET clientSocket;
 extern bool terminateSoftTouchThread;
@@ -33,8 +38,6 @@ extern void writeLog(const char *msg);
 
 namespace SoftTouch {
 	void softTouchThread(void *arg);
-	void allocMemSoftTouch(int width, int height);
-	void freeMemSoftTouch();
 }
 
 #endif

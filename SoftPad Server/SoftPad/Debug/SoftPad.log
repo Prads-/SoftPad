@@ -1,0 +1,35 @@
+﻿Build started 5/05/2012 2:20:39 AM.
+     1>Project "C:\Users\Prads User\Documents\Visual Studio 2010\Projects\SoftPad\SoftPad\SoftPad.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\SoftPad.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt libManageConnections.cpp libSoftTouch.cpp main.cpp
+         libSoftTouch.cpp
+     1>c:\users\prads user\documents\visual studio 2010\projects\softpad\softpad\libsofttouch.cpp(123): warning C4244: '=' : conversion from 'DWORD' to 'unsigned char', possible loss of data
+         Generating Code...
+         Compiling...
+         libManageConnections.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         main.cpp
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Prads User\Documents\Visual Studio 2010\Projects\SoftPad\Debug\SoftPad.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\SoftPad.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Prads User\Documents\Visual Studio 2010\Projects\SoftPad\Debug\SoftPad.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Prads User\Documents\Visual Studio 2010\Projects\SoftPad\Debug\SoftPad.lib" /MACHINE:X86 Debug\resources.res
+         Debug\libKeyboard.obj
+         Debug\libMouse.obj
+         Debug\libSoftTouch.obj
+         Debug\main.obj
+         Debug\libManageConnections.obj
+         LINK : C:\Users\Prads User\Documents\Visual Studio 2010\Projects\SoftPad\Debug\SoftPad.exe not found or not built by the last incremental link; performing full link
+         SoftPad.vcxproj -> C:\Users\Prads User\Documents\Visual Studio 2010\Projects\SoftPad\Debug\SoftPad.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Prads User\Documents\Visual Studio 2010\Projects\SoftPad\Debug\SoftPad.exe;#1" /manifest Debug\SoftPad.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\SoftPad.unsuccessfulbuild".
+         Touching "Debug\SoftPad.lastbuildstate".
+     1>Done Building Project "C:\Users\Prads User\Documents\Visual Studio 2010\Projects\SoftPad\SoftPad\SoftPad.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.07

@@ -9,14 +9,9 @@
 
 #include "libSoftTouch.h"
 
-#define SCREEN_PACKET_SIZE				(viewWidth * viewHeight * 2)		//In bytes
-#define SCREEN_CAPTURE_SIZE				(viewWidth * viewHeight)			//In DWORD
-
-unsigned char *screenPacket = 0;
-DWORD *screenCapture = 0;
+unsigned char screenPacket[SCREEN_PACKET_SIZE];
+DWORD screenCapture[SCREEN_CAPTURE_SIZE];
 int vOffset = 0, hOffset = 0, sWidth = GetSystemMetrics(SM_CXSCREEN), sHeight = GetSystemMetrics(SM_CYSCREEN);
-char appType = 'P';
-int viewWidth = 273, viewHeight = 460;
 
 void processInput(bool release);
 void sendScreen();
@@ -38,10 +33,10 @@ void SoftTouch::softTouchThread(void *arg) {
 					processInput(true);
 					break;
 				case CODE_INCREMENT_OFFSET_V:
-					if (sHeight > vOffset + viewHeight) vOffset += code[2] | (code[3] << 8);
+					if (sHeight > vOffset + VIEW_HEIGHT) vOffset += code[2] | (code[3] << 8);
 					break;
 				case CODE_INCREMENT_OFFSET_H:
-					if (sWidth > hOffset + viewWidth) hOffset +=  code[2] | (code[3] << 8);
+					if (sWidth > hOffset + VIEW_WIDTH) hOffset +=  code[2] | (code[3] << 8);
 					break;
 				case CODE_DECREMENT_OFFSET_V:
 					vOffset -= code[2] | (code[3] << 8);
@@ -62,23 +57,6 @@ void SoftTouch::softTouchThread(void *arg) {
 	}
 }
 
-void SoftTouch::allocMemSoftTouch(int width, int height) {
-	if (screenPacket != 0 || screenCapture != 0) freeMemSoftTouch();
-
-	viewWidth = width;
-	viewHeight = height;
-	screenPacket = new unsigned char[SCREEN_PACKET_SIZE];
-	screenCapture = new DWORD[SCREEN_CAPTURE_SIZE];
-}
-
-void SoftTouch::freeMemSoftTouch() {
-	delete [] screenPacket;
-	delete [] screenCapture;
-
-	screenPacket = 0;
-	screenCapture = 0;
-}
-
 //Processes touch input
 void processInput(bool release) {
 	static unsigned int currentTime = timeGetTime(), previousTime = 0;
@@ -88,10 +66,7 @@ void processInput(bool release) {
 	y = code[4] | (code[5] << 8);
 
 	input.mi.dx = ((x - 47 + hOffset) * 65535 / sWidth);
-	if (appType == 'P')	//If client app is a paid app
-		input.mi.dy = ((y + vOffset) * 65535 / sHeight);
-	else
-		input.mi.dy = ((y - 50 + vOffset) * 65535 / sHeight);
+	input.mi.dy = ((y - 50 + vOffset) * 65535 / sHeight);
 
 	currentTime = timeGetTime();
 	if (currentTime - previousTime > 500) {
@@ -123,31 +98,31 @@ void sendScreen() {
 	HWND hDesktop = GetDesktopWindow();
 	HDC hdcDesktop = GetDC(hDesktop);
 	HDC hdcComptDesktop = CreateCompatibleDC(hdcDesktop);
-	HBITMAP hBitmapCompt = CreateCompatibleBitmap(hdcDesktop, viewWidth, viewHeight);
+	HBITMAP hBitmapCompt = CreateCompatibleBitmap(hdcDesktop, VIEW_WIDTH, VIEW_HEIGHT);
 
 	SelectObject(hdcComptDesktop, hBitmapCompt);
-	BitBlt(hdcComptDesktop, 0, 0, viewWidth, viewHeight, hdcDesktop, hOffset, vOffset, SRCCOPY);
+	BitBlt(hdcComptDesktop, 0, 0, VIEW_WIDTH, VIEW_HEIGHT, hdcDesktop, hOffset, vOffset, SRCCOPY);
 
 	BITMAPINFO bitInfo = {0};
 	bitInfo.bmiHeader.biBitCount = 32;
 	bitInfo.bmiHeader.biCompression = BI_RGB;
-	bitInfo.bmiHeader.biHeight = viewHeight;
+	bitInfo.bmiHeader.biHeight = VIEW_HEIGHT;
 	bitInfo.bmiHeader.biPlanes = 1;
 	bitInfo.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
-	bitInfo.bmiHeader.biWidth = viewWidth;
+	bitInfo.bmiHeader.biWidth = VIEW_WIDTH;
 
-	GetDIBits(hdcComptDesktop, hBitmapCompt, 0, viewHeight, (void*)screenCapture, &bitInfo, DIB_RGB_COLORS);
+	GetDIBits(hdcComptDesktop, hBitmapCompt, 0, VIEW_HEIGHT, (void*)screenCapture, &bitInfo, DIB_RGB_COLORS);
 	
 	ReleaseDC(hDesktop, hdcDesktop);
 	DeleteObject(hdcComptDesktop);
 	DeleteObject(hBitmapCompt);
 
 	int packetCounter = 0;
-	for (int y = viewHeight - 1; y >= 0; --y) {
-		for (int x = 0; x < viewWidth; ++x) {
-			screenPacket[packetCounter] = (screenCapture[x + y * viewWidth] & 0xF00000) >> 16;
-			screenPacket[packetCounter++] |= (screenCapture[x + y * viewWidth] & 0xF000) >> 12;
-			screenPacket[packetCounter++] = screenCapture[x + y * viewWidth] & 0xF0;
+	for (int y = VIEW_HEIGHT - 1; y >= 0; --y) {
+		for (int x = 0; x < VIEW_WIDTH; ++x) {
+			screenPacket[packetCounter] = (screenCapture[x + y * VIEW_WIDTH] & 0xF00000) >> 16;
+			screenPacket[packetCounter++] |= (screenCapture[x + y * VIEW_WIDTH] & 0xF000) >> 12;
+			screenPacket[packetCounter++] = screenCapture[x + y * VIEW_WIDTH] & 0xF0;
 		}
 	}
 	send(clientSocket, (char*)screenPacket, SCREEN_PACKET_SIZE, 0);	

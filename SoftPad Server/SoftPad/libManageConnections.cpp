@@ -23,11 +23,6 @@ using namespace SoftTouch;
 
 #pragma comment (lib, "Ws2_32.lib")
 
-//From libSoftTouch.cpp
-extern char appType;
-extern int viewWidth;
-extern int viewHeight;
-
 SOCKET clientSocket;
 unsigned char code[PACKET_SIZE] = {0};
 INPUT input = {0};
@@ -69,13 +64,6 @@ void socketConnect(void *args) {
 		clientSocket = accept(servSocket, NULL, NULL);
 		if (clientSocket == INVALID_SOCKET) goto error;
 		
-		recv(clientSocket, (char*)code, PACKET_SIZE, MSG_WAITALL);
-		appType = code[0];	//Paid or Free app
-		if (appType == 'P')
-			allocMemSoftTouch(273, 460);
-		else
-			allocMemSoftTouch(273, 410);
-
 		threadsSwitch(true, false, false, false);
 		if (_beginthread(indexThread, 0, 0) == -1) goto error;
 
