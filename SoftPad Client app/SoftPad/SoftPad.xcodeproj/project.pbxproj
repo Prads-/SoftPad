@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6545FE48154E5A99008BADAE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6545FE46154E5A99008BADAE /* MainStoryboard_iPhone.storyboard */; };
+		654C51BE152B0F40003BC450 /* KBViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 654C51BD152B0F40003BC450 /* KBViewController.mm */; };
+		6556AD5C1537A0930064125D /* STViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6556AD5B1537A0930064125D /* STViewController.mm */; };
+		655F413B15513353001B70BD /* paid appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 655F413A15513353001B70BD /* paid appicon.png */; };
+		655F413E15513358001B70BD /* paid appicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 655F413D15513358001B70BD /* paid appicon2.png */; };
+		656C180D15551E4200B58F26 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656C180515551E4200B58F26 /* libGoogleAdMobAds.a */; };
+		656C1812155520EF00B58F26 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656C180F155520EF00B58F26 /* AudioToolbox.framework */; };
+		656C1813155520EF00B58F26 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656C1810155520EF00B58F26 /* MessageUI.framework */; };
+		656C1814155520EF00B58F26 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656C1811155520EF00B58F26 /* SystemConfiguration.framework */; };
+		65B615701541699A00678656 /* Actions-dialog-close-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B6156A1541699A00678656 /* Actions-dialog-close-icon.png */; };
+		65B615711541699A00678656 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B6156B1541699A00678656 /* exit.png */; };
+		65B615721541699A00678656 /* file-del-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B6156C1541699A00678656 /* file-del-icon.png */; };
+		65B615731541699A00678656 /* file-edit-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B6156D1541699A00678656 /* file-edit-icon.png */; };
+		65B615741541699A00678656 /* file-new-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B6156E1541699A00678656 /* file-new-icon.png */; };
+		65B615751541699A00678656 /* network_wireless.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B6156F1541699A00678656 /* network_wireless.png */; };
+		65B6157715416F5900678656 /* Actions-help-about-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B6157615416F5900678656 /* Actions-help-about-icon.png */; };
+		65B6157A154174AF00678656 /* ConnectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65B61579154174AF00678656 /* ConnectionViewController.mm */; };
+		65DA2E691525BBF50097077B /* carbonfibre.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA2E681525BBF50097077B /* carbonfibre.png */; };
+		65DAF0D91546970500564626 /* socketConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65DAF0D81546970500564626 /* socketConnection.cpp */; };
+		65DDC054153FD96900A94D06 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DDC053153FD96900A94D06 /* left.png */; };
+		65DDC058153FD97C00A94D06 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DDC055153FD97C00A94D06 /* down.png */; };
+		65DDC059153FD97C00A94D06 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DDC056153FD97C00A94D06 /* right.png */; };
+		65DDC05A153FD97C00A94D06 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DDC057153FD97C00A94D06 /* up.png */; };
+		65DDC05C153FDA3500A94D06 /* keyboard-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DDC05B153FDA3500A94D06 /* keyboard-icon.png */; };
+		65DDC05E153FDA7300A94D06 /* mouse-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DDC05D153FDA7300A94D06 /* mouse-icon.png */; };
+		65DDC060153FDA7E00A94D06 /* iphone-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DDC05F153FDA7E00A94D06 /* iphone-icon.png */; };
+		65DDC062153FE03C00A94D06 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DDC061153FE03C00A94D06 /* menu.png */; };
+		65E7AC431522F855005C1BB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7AC421522F855005C1BB5 /* UIKit.framework */; };
+		65E7AC451522F855005C1BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7AC441522F855005C1BB5 /* Foundation.framework */; };
+		65E7AC471522F855005C1BB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7AC461522F855005C1BB5 /* CoreGraphics.framework */; };
+		65E7AC4D1522F855005C1BB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65E7AC4B1522F855005C1BB5 /* InfoPlist.strings */; };
+		65E7AC4F1522F855005C1BB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E7AC4E1522F855005C1BB5 /* main.m */; };
+		65E7AC531522F855005C1BB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E7AC521522F855005C1BB5 /* AppDelegate.m */; };
+		65E7AC591522F855005C1BB5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E7AC571522F855005C1BB5 /* MainStoryboard_iPad.storyboard */; };
+		65E7AC5C1522F855005C1BB5 /* TPViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65E7AC5B1522F855005C1BB5 /* TPViewController.mm */; };
+		65E7AC641522F855005C1BB5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7AC631522F855005C1BB5 /* SenTestingKit.framework */; };
+		65E7AC651522F855005C1BB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7AC421522F855005C1BB5 /* UIKit.framework */; };
+		65E7AC661522F855005C1BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7AC441522F855005C1BB5 /* Foundation.framework */; };
+		65EACEFC1547E61800836E77 /* MenuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65EACEFB1547E61800836E77 /* MenuViewController.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65E7AC671522F855005C1BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65E7AC351522F855005C1BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65E7AC3D1522F855005C1BB5;
+			remoteInfo = SoftPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6545FE47154E5A99008BADAE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		654C51BC152B0F40003BC450 /* KBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBViewController.h; sourceTree = "<group>"; };
+		654C51BD152B0F40003BC450 /* KBViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KBViewController.mm; sourceTree = "<group>"; };
+		6554634C152C76A4007653C7 /* definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = definition.h; sourceTree = "<group>"; };
+		6556AD5A1537A0930064125D /* STViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
+		6556AD5B1537A0930064125D /* STViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = STViewController.mm; sourceTree = "<group>"; };
+		655F413A15513353001B70BD /* paid appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paid appicon.png"; sourceTree = "<group>"; };
+		655F413D15513358001B70BD /* paid appicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paid appicon2.png"; sourceTree = "<group>"; };
+		656C17FC15551E4200B58F26 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		656C17FD15551E4200B58F26 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		656C17FE15551E4200B58F26 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		656C17FF15551E4200B58F26 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		656C180015551E4200B58F26 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		656C180115551E4200B58F26 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		656C180215551E4200B58F26 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		656C180315551E4200B58F26 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		656C180415551E4200B58F26 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		656C180515551E4200B58F26 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		656C180715551E4200B58F26 /* GADCustomEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
+		656C180815551E4200B58F26 /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
+		656C180915551E4200B58F26 /* GADCustomEventExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
+		656C180A15551E4200B58F26 /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
+		656C180B15551E4200B58F26 /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
+		656C180C15551E4200B58F26 /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
+		656C180F155520EF00B58F26 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		656C1810155520EF00B58F26 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		656C1811155520EF00B58F26 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		65B6156A1541699A00678656 /* Actions-dialog-close-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Actions-dialog-close-icon.png"; sourceTree = "<group>"; };
+		65B6156B1541699A00678656 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
+		65B6156C1541699A00678656 /* file-del-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-del-icon.png"; sourceTree = "<group>"; };
+		65B6156D1541699A00678656 /* file-edit-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-edit-icon.png"; sourceTree = "<group>"; };
+		65B6156E1541699A00678656 /* file-new-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-new-icon.png"; sourceTree = "<group>"; };
+		65B6156F1541699A00678656 /* network_wireless.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = network_wireless.png; sourceTree = "<group>"; };
+		65B6157615416F5900678656 /* Actions-help-about-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Actions-help-about-icon.png"; sourceTree = "<group>"; };
+		65B61578154174AF00678656 /* ConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionViewController.h; sourceTree = "<group>"; };
+		65B61579154174AF00678656 /* ConnectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ConnectionViewController.mm; sourceTree = "<group>"; };
+		65DA2E681525BBF50097077B /* carbonfibre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carbonfibre.png; sourceTree = "<group>"; };
+		65DAF0D81546970500564626 /* socketConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socketConnection.cpp; sourceTree = "<group>"; };
+		65DAF0DC1546A98100564626 /* socketConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = socketConnection.h; sourceTree = "<group>"; };
+		65DDC053153FD96900A94D06 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		65DDC055153FD97C00A94D06 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		65DDC056153FD97C00A94D06 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		65DDC057153FD97C00A94D06 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		65DDC05B153FDA3500A94D06 /* keyboard-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard-icon.png"; sourceTree = "<group>"; };
+		65DDC05D153FDA7300A94D06 /* mouse-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mouse-icon.png"; sourceTree = "<group>"; };
+		65DDC05F153FDA7E00A94D06 /* iphone-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-icon.png"; sourceTree = "<group>"; };
+		65DDC061153FE03C00A94D06 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		65E7AC3E1522F855005C1BB5 /* SoftPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoftPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E7AC421522F855005C1BB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		65E7AC441522F855005C1BB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		65E7AC461522F855005C1BB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		65E7AC4A1522F855005C1BB5 /* SoftPad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoftPad-Info.plist"; sourceTree = "<group>"; };
+		65E7AC4C1522F855005C1BB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		65E7AC4E1522F855005C1BB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65E7AC501522F855005C1BB5 /* SoftPad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoftPad-Prefix.pch"; sourceTree = "<group>"; };
+		65E7AC511522F855005C1BB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65E7AC521522F855005C1BB5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65E7AC581522F855005C1BB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		65E7AC5A1522F855005C1BB5 /* TPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPViewController.h; sourceTree = "<group>"; };
+		65E7AC5B1522F855005C1BB5 /* TPViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TPViewController.mm; sourceTree = "<group>"; };
+		65E7AC621522F855005C1BB5 /* SoftPadTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoftPadTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E7AC631522F855005C1BB5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		65EACEFA1547E61800836E77 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		65EACEFB1547E61800836E77 /* MenuViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MenuViewController.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65E7AC3B1522F855005C1BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				656C1812155520EF00B58F26 /* AudioToolbox.framework in Frameworks */,
+				656C1813155520EF00B58F26 /* MessageUI.framework in Frameworks */,
+				656C1814155520EF00B58F26 /* SystemConfiguration.framework in Frameworks */,
+				65E7AC431522F855005C1BB5 /* UIKit.framework in Frameworks */,
+				65E7AC451522F855005C1BB5 /* Foundation.framework in Frameworks */,
+				65E7AC471522F855005C1BB5 /* CoreGraphics.framework in Frameworks */,
+				656C180D15551E4200B58F26 /* libGoogleAdMobAds.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7AC5E1522F855005C1BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7AC641522F855005C1BB5 /* SenTestingKit.framework in Frameworks */,
+				65E7AC651522F855005C1BB5 /* UIKit.framework in Frameworks */,
+				65E7AC661522F855005C1BB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		656C17FB15551E4200B58F26 /* GoogleAdMobAdsSdkiOS-6.0.1 */ = {
+			isa = PBXGroup;
+			children = (
+				656C17FC15551E4200B58F26 /* GADAdMobExtras.h */,
+				656C17FD15551E4200B58F26 /* GADAdNetworkExtras.h */,
+				656C17FE15551E4200B58F26 /* GADAdSize.h */,
+				656C17FF15551E4200B58F26 /* GADBannerView.h */,
+				656C180015551E4200B58F26 /* GADBannerViewDelegate.h */,
+				656C180115551E4200B58F26 /* GADInterstitial.h */,
+				656C180215551E4200B58F26 /* GADInterstitialDelegate.h */,
+				656C180315551E4200B58F26 /* GADRequest.h */,
+				656C180415551E4200B58F26 /* GADRequestError.h */,
+				656C180515551E4200B58F26 /* libGoogleAdMobAds.a */,
+				656C180615551E4200B58F26 /* Mediation */,
+			);
+			path = "GoogleAdMobAdsSdkiOS-6.0.1";
+			sourceTree = "<group>";
+		};
+		656C180615551E4200B58F26 /* Mediation */ = {
+			isa = PBXGroup;
+			children = (
+				656C180715551E4200B58F26 /* GADCustomEventBanner.h */,
+				656C180815551E4200B58F26 /* GADCustomEventBannerDelegate.h */,
+				656C180915551E4200B58F26 /* GADCustomEventExtras.h */,
+				656C180A15551E4200B58F26 /* GADCustomEventInterstitial.h */,
+				656C180B15551E4200B58F26 /* GADCustomEventInterstitialDelegate.h */,
+				656C180C15551E4200B58F26 /* GADCustomEventRequest.h */,
+			);
+			path = Mediation;
+			sourceTree = "<group>";
+		};
+		65C67EC01523115C002C98BC /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				65B6156A1541699A00678656 /* Actions-dialog-close-icon.png */,
+				65B6157615416F5900678656 /* Actions-help-about-icon.png */,
+				65B6156B1541699A00678656 /* exit.png */,
+				65B6156C1541699A00678656 /* file-del-icon.png */,
+				65B6156D1541699A00678656 /* file-edit-icon.png */,
+				65B6156E1541699A00678656 /* file-new-icon.png */,
+				65B6156F1541699A00678656 /* network_wireless.png */,
+				65DDC061153FE03C00A94D06 /* menu.png */,
+				65DDC05F153FDA7E00A94D06 /* iphone-icon.png */,
+				65DDC05D153FDA7300A94D06 /* mouse-icon.png */,
+				65DDC05B153FDA3500A94D06 /* keyboard-icon.png */,
+				65DDC055153FD97C00A94D06 /* down.png */,
+				65DDC056153FD97C00A94D06 /* right.png */,
+				65DDC057153FD97C00A94D06 /* up.png */,
+				65DDC053153FD96900A94D06 /* left.png */,
+				65DA2E681525BBF50097077B /* carbonfibre.png */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		65E7AC331522F855005C1BB5 = {
+			isa = PBXGroup;
+			children = (
+				656C180F155520EF00B58F26 /* AudioToolbox.framework */,
+				656C1810155520EF00B58F26 /* MessageUI.framework */,
+				656C1811155520EF00B58F26 /* SystemConfiguration.framework */,
+				655F413D15513358001B70BD /* paid appicon2.png */,
+				655F413A15513353001B70BD /* paid appicon.png */,
+				65E7AC481522F855005C1BB5 /* SoftPad */,
+				65E7AC411522F855005C1BB5 /* Frameworks */,
+				65E7AC3F1522F855005C1BB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65E7AC3F1522F855005C1BB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65E7AC3E1522F855005C1BB5 /* SoftPad.app */,
+				65E7AC621522F855005C1BB5 /* SoftPadTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65E7AC411522F855005C1BB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65E7AC421522F855005C1BB5 /* UIKit.framework */,
+				65E7AC441522F855005C1BB5 /* Foundation.framework */,
+				65E7AC461522F855005C1BB5 /* CoreGraphics.framework */,
+				65E7AC631522F855005C1BB5 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65E7AC481522F855005C1BB5 /* SoftPad */ = {
+			isa = PBXGroup;
+			children = (
+				656C17FB15551E4200B58F26 /* GoogleAdMobAdsSdkiOS-6.0.1 */,
+				6545FE46154E5A99008BADAE /* MainStoryboard_iPhone.storyboard */,
+				65C67EC01523115C002C98BC /* resources */,
+				65E7AC511522F855005C1BB5 /* AppDelegate.h */,
+				65E7AC521522F855005C1BB5 /* AppDelegate.m */,
+				65E7AC571522F855005C1BB5 /* MainStoryboard_iPad.storyboard */,
+				65E7AC5A1522F855005C1BB5 /* TPViewController.h */,
+				65E7AC5B1522F855005C1BB5 /* TPViewController.mm */,
+				65E7AC491522F855005C1BB5 /* Supporting Files */,
+				654C51BC152B0F40003BC450 /* KBViewController.h */,
+				6556AD5A1537A0930064125D /* STViewController.h */,
+				6556AD5B1537A0930064125D /* STViewController.mm */,
+				654C51BD152B0F40003BC450 /* KBViewController.mm */,
+				6554634C152C76A4007653C7 /* definition.h */,
+				65B61578154174AF00678656 /* ConnectionViewController.h */,
+				65B61579154174AF00678656 /* ConnectionViewController.mm */,
+				65DAF0D81546970500564626 /* socketConnection.cpp */,
+				65DAF0DC1546A98100564626 /* socketConnection.h */,
+				65EACEFA1547E61800836E77 /* MenuViewController.h */,
+				65EACEFB1547E61800836E77 /* MenuViewController.mm */,
+			);
+			path = SoftPad;
+			sourceTree = "<group>";
+		};
+		65E7AC491522F855005C1BB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65E7AC4A1522F855005C1BB5 /* SoftPad-Info.plist */,
+				65E7AC4B1522F855005C1BB5 /* InfoPlist.strings */,
+				65E7AC4E1522F855005C1BB5 /* main.m */,
+				65E7AC501522F855005C1BB5 /* SoftPad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65E7AC3D1522F855005C1BB5 /* SoftPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E7AC741522F855005C1BB5 /* Build configuration list for PBXNativeTarget "SoftPad" */;
+			buildPhases = (
+				65E7AC3A1522F855005C1BB5 /* Sources */,
+				65E7AC3B1522F855005C1BB5 /* Frameworks */,
+				65E7AC3C1522F855005C1BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoftPad;
+			productName = SoftPad;
+			productReference = 65E7AC3E1522F855005C1BB5 /* SoftPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65E7AC611522F855005C1BB5 /* SoftPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E7AC771522F855005C1BB5 /* Build configuration list for PBXNativeTarget "SoftPadTests" */;
+			buildPhases = (
+				65E7AC5D1522F855005C1BB5 /* Sources */,
+				65E7AC5E1522F855005C1BB5 /* Frameworks */,
+				65E7AC5F1522F855005C1BB5 /* Resources */,
+				65E7AC601522F855005C1BB5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65E7AC681522F855005C1BB5 /* PBXTargetDependency */,
+			);
+			name = SoftPadTests;
+			productName = SoftPadTests;
+			productReference = 65E7AC621522F855005C1BB5 /* SoftPadTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65E7AC351522F855005C1BB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 65E7AC381522F855005C1BB5 /* Build configuration list for PBXProject "SoftPad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 65E7AC331522F855005C1BB5;
+			productRefGroup = 65E7AC3F1522F855005C1BB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65E7AC3D1522F855005C1BB5 /* SoftPad */,
+				65E7AC611522F855005C1BB5 /* SoftPadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65E7AC3C1522F855005C1BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7AC4D1522F855005C1BB5 /* InfoPlist.strings in Resources */,
+				65E7AC591522F855005C1BB5 /* MainStoryboard_iPad.storyboard in Resources */,
+				65DA2E691525BBF50097077B /* carbonfibre.png in Resources */,
+				65DDC054153FD96900A94D06 /* left.png in Resources */,
+				65DDC058153FD97C00A94D06 /* down.png in Resources */,
+				65DDC059153FD97C00A94D06 /* right.png in Resources */,
+				65DDC05A153FD97C00A94D06 /* up.png in Resources */,
+				65DDC05C153FDA3500A94D06 /* keyboard-icon.png in Resources */,
+				65DDC05E153FDA7300A94D06 /* mouse-icon.png in Resources */,
+				65DDC060153FDA7E00A94D06 /* iphone-icon.png in Resources */,
+				65DDC062153FE03C00A94D06 /* menu.png in Resources */,
+				65B615701541699A00678656 /* Actions-dialog-close-icon.png in Resources */,
+				65B615711541699A00678656 /* exit.png in Resources */,
+				65B615721541699A00678656 /* file-del-icon.png in Resources */,
+				65B615731541699A00678656 /* file-edit-icon.png in Resources */,
+				65B615741541699A00678656 /* file-new-icon.png in Resources */,
+				65B615751541699A00678656 /* network_wireless.png in Resources */,
+				65B6157715416F5900678656 /* Actions-help-about-icon.png in Resources */,
+				6545FE48154E5A99008BADAE /* MainStoryboard_iPhone.storyboard in Resources */,
+				655F413B15513353001B70BD /* paid appicon.png in Resources */,
+				655F413E15513358001B70BD /* paid appicon2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7AC5F1522F855005C1BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65E7AC601522F855005C1BB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65E7AC3A1522F855005C1BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7AC4F1522F855005C1BB5 /* main.m in Sources */,
+				65E7AC531522F855005C1BB5 /* AppDelegate.m in Sources */,
+				65E7AC5C1522F855005C1BB5 /* TPViewController.mm in Sources */,
+				654C51BE152B0F40003BC450 /* KBViewController.mm in Sources */,
+				6556AD5C1537A0930064125D /* STViewController.mm in Sources */,
+				65B6157A154174AF00678656 /* ConnectionViewController.mm in Sources */,
+				65DAF0D91546970500564626 /* socketConnection.cpp in Sources */,
+				65EACEFC1547E61800836E77 /* MenuViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7AC5D1522F855005C1BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65E7AC681522F855005C1BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65E7AC3D1522F855005C1BB5 /* SoftPad */;
+			targetProxy = 65E7AC671522F855005C1BB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6545FE46154E5A99008BADAE /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6545FE47154E5A99008BADAE /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		65E7AC4B1522F855005C1BB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E7AC4C1522F855005C1BB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		65E7AC571522F855005C1BB5 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E7AC581522F855005C1BB5 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65E7AC721522F855005C1BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		65E7AC731522F855005C1BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65E7AC751522F855005C1BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoftPad/SoftPad-Prefix.pch";
+				INFOPLIST_FILE = "SoftPad/SoftPad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SoftPad/GoogleAdMobAdsSdkiOS-6.0.1\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		65E7AC761522F855005C1BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoftPad/SoftPad-Prefix.pch";
+				INFOPLIST_FILE = "SoftPad/SoftPad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SoftPad/GoogleAdMobAdsSdkiOS-6.0.1\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		65E7AC781522F855005C1BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SoftPad.app/SoftPad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoftPad/SoftPad-Prefix.pch";
+				INFOPLIST_FILE = "SoftPadTests/SoftPadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		65E7AC791522F855005C1BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SoftPad.app/SoftPad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoftPad/SoftPad-Prefix.pch";
+				INFOPLIST_FILE = "SoftPadTests/SoftPadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65E7AC381522F855005C1BB5 /* Build configuration list for PBXProject "SoftPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E7AC721522F855005C1BB5 /* Debug */,
+				65E7AC731522F855005C1BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E7AC741522F855005C1BB5 /* Build configuration list for PBXNativeTarget "SoftPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E7AC751522F855005C1BB5 /* Debug */,
+				65E7AC761522F855005C1BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E7AC771522F855005C1BB5 /* Build configuration list for PBXNativeTarget "SoftPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E7AC781522F855005C1BB5 /* Debug */,
+				65E7AC791522F855005C1BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65E7AC351522F855005C1BB5 /* Project object */;
+}
